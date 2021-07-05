@@ -40,11 +40,11 @@ Try the demo on Unity Play: https://play.unity.com/mg/other/simple-rts-game-demo
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/relidaar/SimpleRTS.git
+   git clone https://github.com/relidaar/SimpleRTSGame.git
    ```
 2. Change your directory
    ```sh
-   cd SimpleRTS
+   cd SimpleRTSGame
    ```
 
 
@@ -92,26 +92,26 @@ Distributed under the MIT License. See  [`LICENSE`][license-url] for more inform
 
 Oleksandr Sviatetskyi - alex.sviatetskyi@gmail.com
 
-Project Link: [https://github.com/relidaar/SimpleRTS][project-link]
+Project Link: [https://github.com/relidaar/SimpleRTSGame][project-link]
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
-[project-link]: https://github.com/relidaar/SimpleRTS
-[project-issues-link]: https://github.com/relidaar/SimpleRTS/issues
+[project-link]: https://github.com/relidaar/SimpleRTSGame
+[project-issues-link]: https://github.com/relidaar/SimpleRTSGame/issues
 
-[contributors-shield]: https://img.shields.io/github/contributors/relidaar/SimpleRTS?style=for-the-badge
-[contributors-url]: https://github.com/relidaar/SimpleRTS/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/relidaar/SimpleRTSGame?style=for-the-badge
+[contributors-url]: https://github.com/relidaar/SimpleRTSGame/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/relidaar/SimpleRTS?style=for-the-badge
-[forks-url]: https://github.com/relidaar/SimpleRTS/network/members
+[forks-shield]: https://img.shields.io/github/forks/relidaar/SimpleRTSGame?style=for-the-badge
+[forks-url]: https://github.com/relidaar/SimpleRTSGame/network/members
 
-[issues-shield]: https://img.shields.io/github/issues/relidaar/SimpleRTS?style=for-the-badge
-[issues-url]: https://github.com/relidaar/SimpleRTS/issues
+[issues-shield]: https://img.shields.io/github/issues/relidaar/SimpleRTSGame?style=for-the-badge
+[issues-url]: https://github.com/relidaar/SimpleRTSGame/issues
 
-[license-shield]: https://img.shields.io/github/license/relidaar/SimpleRTS?style=for-the-badge
-[license-url]: https://github.com/relidaar/SimpleRTS/blob/main/LICENSE
+[license-shield]: https://img.shields.io/github/license/relidaar/SimpleRTSGame?style=for-the-badge
+[license-url]: https://github.com/relidaar/SimpleRTSGame/blob/main/LICENSE
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/oleksandr-sviatetskyi-45424b143/
