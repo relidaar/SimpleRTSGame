@@ -10,8 +10,10 @@ namespace GameManagers
     {
         [SerializeField] private Text unitsText;
         [SerializeField] private Text coinsText;
-        [SerializeField] private Text gameOverText;
+        [SerializeField] private GameObject gameMenuPanel;
+        [SerializeField] private Text gameMenuTitleText;
         [SerializeField] private Button restartButton;
+        [SerializeField] private Button mainMenuButton;
         [SerializeField] private Button buyUnitButton;
         
         [SerializeField] private GameObject playerUnitPrefab;
@@ -34,36 +36,44 @@ namespace GameManagers
         private GameObject _playerCastle;
 
         public int PlayerCoins { get; private set; }
+
+        private float fixedDeltaTime;
+
+        void Awake()
+        {
+            fixedDeltaTime = Time.fixedDeltaTime;
+        }
         
         private void Start()
         {
             restartButton.onClick.AddListener(RestartScene);
-            restartButton.gameObject.SetActive(false);
+            mainMenuButton.onClick.AddListener(ToMainMenu);
+            gameMenuPanel.gameObject.SetActive(false);
             
             buyUnitButton.onClick.AddListener(BuyUnit);
             buyUnitButton.gameObject.SetActive(false);
-            
-            gameOverText.enabled = false;
 
             var music = GetComponent<Music>();
 
             _playerCastle = GameObject.FindGameObjectWithTag("PlayerCastle"); 
             _playerCastle.GetComponent<CastleController>().CastleDestroyed += () =>
             {
-                gameOverText.text = "Defeat";
+                gameMenuTitleText.text = "Defeat";
                 music.PlayDefeatMusic();
-                GameOver();
+                OpenGameMenu();
             };
             
             GameObject.FindGameObjectWithTag("EnemyCastle").GetComponent<CastleController>().CastleDestroyed += () =>
             {
-                gameOverText.text = "Victory";
+                gameMenuTitleText.text = "Victory";
                 music.PlayVictoryMusic();
-                GameOver();
+                OpenGameMenu();
             };
 
             foreach (var go in GameObject.FindGameObjectsWithTag("EnemyUnit"))
+            {
                 go.GetComponent<UnitController>().UnitDie += () => PlayerCoins += coinPerUnit;
+            }
         }
 
         private void Update()
@@ -94,6 +104,18 @@ namespace GameManagers
                 PlayerCoins += coinsSpawnCount;
                 _coinsSpawnTimer = 0;
             }
+            
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                if (gameMenuPanel.activeSelf)
+                {
+                    CloseGameMenu();
+                }
+                else
+                {
+                    OpenGameMenu();
+                }
+            }
         }
         
         private void BuyUnit()
@@ -102,18 +124,40 @@ namespace GameManagers
             Instantiate(playerUnitPrefab, playerUnitSpawn.transform.position, playerUnitPrefab.transform.rotation);
         }
 
-        private void GameOver()
+        private void OpenGameMenu()
         {
-            Time.timeScale = 0;
-            gameOverText.enabled = true;
-            restartButton.gameObject.SetActive(true);
+            StopTime();
+            gameMenuPanel.gameObject.SetActive(true);
         }
-        
-        public void RestartScene()
+
+        private void CloseGameMenu()
+        {
+            StartTime();
+            gameMenuPanel.gameObject.SetActive(false);
+        }
+
+        private void ToMainMenu()
+        {
+            SceneManager.LoadScene("MainMenu");
+            StartTime();
+        }
+
+        private void RestartScene()
         {      
             var scene = SceneManager.GetActiveScene(); 
             SceneManager.LoadScene(scene.name);
+            StartTime();
+        }
+
+        private void StartTime()
+        {
             Time.timeScale = 1;
+            Time.fixedDeltaTime = fixedDeltaTime * Time.timeScale;
+        }
+
+        private void StopTime()
+        {
+            Time.timeScale = 0;
         }
 
         public static void UnitTakeDamage(UnitController attacking, UnitController attacked)
