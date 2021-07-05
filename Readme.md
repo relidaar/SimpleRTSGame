@@ -18,6 +18,8 @@ Current demo features:
 - Enemy waves
 - Coins and unit purchase
 
+Try the demo on Unity Play: https://play.unity.com/mg/other/simple-rts-game-demo
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
