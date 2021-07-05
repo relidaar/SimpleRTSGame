@@ -53,8 +53,8 @@ Current demo features:
 ```sh
 WASD or Arrow keys - Move the camera
 Mouse wheel - Change the camera pitch
-Mouse left click - Choose a unit
-Mouse left click (with shift or drag) - Choose multiple units
+Mouse left click - Choose a single unit
+Mouse left click (with Shift key or dragging) - Choose multiple units
 Mouse right click - Choose a target to attack
 ```
 
