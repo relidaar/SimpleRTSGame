@@ -1,9 +1,4 @@
-﻿# Simple RTS Game Demo
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+# Simple RTS Game Demo
 
 [Report Bug][project-issues-link]
 ·
@@ -40,7 +35,7 @@ Try the demo on Unity Play: https://play.unity.com/mg/other/simple-rts-game-demo
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/relidaar/SimpleRTSGame.git
+   git clone https://gitlab.com/relidaar/SimpleRTSGame.git
    ```
 2. Change your directory
    ```sh
@@ -90,28 +85,18 @@ Distributed under the MIT License. See  [`LICENSE`][license-url] for more inform
 ## Contact
 [(Back to top)](#table-of-contents)
 
-Oleksandr Sviatetskyi - alex.sviatetskyi@outlook.com
+Oleksandr Sviatetskyi - alex.sviatetskyi@icloud.com
 
-Project Link: [https://github.com/relidaar/SimpleRTSGame][project-link]
+Project Link: [https://gitlab.com/relidaar/SimpleRTSGame][project-link]
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
-[project-link]: https://github.com/relidaar/SimpleRTSGame
-[project-issues-link]: https://github.com/relidaar/SimpleRTSGame/issues
+[project-link]: https://gitlab.com/relidaar/SimpleRTSGame
+[project-issues-link]: https://gitlab.com/relidaar/SimpleRTSGame/-/issues
 
-[contributors-shield]: https://img.shields.io/github/contributors/relidaar/SimpleRTSGame?style=for-the-badge
-[contributors-url]: https://github.com/relidaar/SimpleRTSGame/graphs/contributors
-
-[forks-shield]: https://img.shields.io/github/forks/relidaar/SimpleRTSGame?style=for-the-badge
-[forks-url]: https://github.com/relidaar/SimpleRTSGame/network/members
-
-[issues-shield]: https://img.shields.io/github/issues/relidaar/SimpleRTSGame?style=for-the-badge
-[issues-url]: https://github.com/relidaar/SimpleRTSGame/issues
-
-[license-shield]: https://img.shields.io/github/license/relidaar/SimpleRTSGame?style=for-the-badge
-[license-url]: https://github.com/relidaar/SimpleRTSGame/blob/main/LICENSE
+[license-url]: https://gitlab.com/relidaar/SimpleRTSGame/-/blob/master/LICENSE
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/oleksandr-sviatetskyi-45424b143/
